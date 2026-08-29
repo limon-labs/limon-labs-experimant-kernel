@@ -1,0 +1,125 @@
+  BOOT  build/boot_sector.bin
+  STAGE build/second_stage.bin
+  LOAD  build/kernel_loader.bin
+  AS    boot/x86/kernel_entry.asm
+  AS    arch/x86/isr/isr.asm
+  AS    arch/x86/irq/irq.asm
+  CC    kernel/core/kernel.c
+  CC    kernel/core/panic.c
+  CC    kernel/core/init.c
+  CC    kernel/core/lib.c
+  CC    arch/x86/gdt/gdt.c
+  CC    arch/x86/idt/idt.c
+  CC    arch/x86/cpu/cpu.c
+  CC    hal/cpu/io.c
+  CC    hal/interrupt/pic.c
+  CC    drivers/display/screen.c
+  CC    drivers/keyboard/keyboard.c
+  CC    cis/core/cis.c
+  LD    kernel.elf
+/home/limon/opt/cross/bin/i686-elf-ld: build/arch/x86/isr/isr.o: in function `isr0':
+/home/limon/AHK/arch/x86/isr//arch/x86/isr/isr.asm:14: multiple definition of `isr0'; build/arch/x86/isr/isr.o:/home/limon/AHK/arch/x86/isr//arch/x86/isr/isr.asm:14: first defined here
+/home/limon/opt/cross/bin/i686-elf-ld: build/arch/x86/isr/isr.o: in function `isr1':
+/home/limon/AHK/arch/x86/isr//arch/x86/isr/isr.asm:14: multiple definition of `isr1'; build/arch/x86/isr/isr.o:/home/limon/AHK/arch/x86/isr//arch/x86/isr/isr.asm:14: first defined here
+/home/limon/opt/cross/bin/i686-elf-ld: build/arch/x86/isr/isr.o: in function `isr2':
+/home/limon/AHK/arch/x86/isr//arch/x86/isr/isr.asm:14: multiple definition of `isr2'; build/arch/x86/isr/isr.o:/home/limon/AHK/arch/x86/isr//arch/x86/isr/isr.asm:14: first defined here
+/home/limon/opt/cross/bin/i686-elf-ld: build/arch/x86/isr/isr.o: in function `isr3':
+/home/limon/AHK/arch/x86/isr//arch/x86/isr/isr.asm:14: multiple definition of `isr3'; build/arch/x86/isr/isr.o:/home/limon/AHK/arch/x86/isr//arch/x86/isr/isr.asm:14: first defined here
+/home/limon/opt/cross/bin/i686-elf-ld: build/arch/x86/isr/isr.o: in function `isr4':
+/home/limon/AHK/arch/x86/isr//arch/x86/isr/isr.asm:14: multiple definition of `isr4'; build/arch/x86/isr/isr.o:/home/limon/AHK/arch/x86/isr//arch/x86/isr/isr.asm:14: first defined here
+/home/limon/opt/cross/bin/i686-elf-ld: build/arch/x86/isr/isr.o: in function `isr5':
+/home/limon/AHK/arch/x86/isr//arch/x86/isr/isr.asm:14: multiple definition of `isr5'; build/arch/x86/isr/isr.o:/home/limon/AHK/arch/x86/isr//arch/x86/isr/isr.asm:14: first defined here
+/home/limon/opt/cross/bin/i686-elf-ld: build/arch/x86/isr/isr.o: in function `isr6':
+/home/limon/AHK/arch/x86/isr//arch/x86/isr/isr.asm:14: multiple definition of `isr6'; build/arch/x86/isr/isr.o:/home/limon/AHK/arch/x86/isr//arch/x86/isr/isr.asm:14: first defined here
+/home/limon/opt/cross/bin/i686-elf-ld: build/arch/x86/isr/isr.o: in function `isr7':
+/home/limon/AHK/arch/x86/isr//arch/x86/isr/isr.asm:14: multiple definition of `isr7'; build/arch/x86/isr/isr.o:/home/limon/AHK/arch/x86/isr//arch/x86/isr/isr.asm:14: first defined here
+/home/limon/opt/cross/bin/i686-elf-ld: build/arch/x86/isr/isr.o: in function `isr8':
+/home/limon/AHK/arch/x86/isr//arch/x86/isr/isr.asm:23: multiple definition of `isr8'; build/arch/x86/isr/isr.o:/home/limon/AHK/arch/x86/isr//arch/x86/isr/isr.asm:23: first defined here
+/home/limon/opt/cross/bin/i686-elf-ld: build/arch/x86/isr/isr.o: in function `isr9':
+/home/limon/AHK/arch/x86/isr//arch/x86/isr/isr.asm:14: multiple definition of `isr9'; build/arch/x86/isr/isr.o:/home/limon/AHK/arch/x86/isr//arch/x86/isr/isr.asm:14: first defined here
+/home/limon/opt/cross/bin/i686-elf-ld: build/arch/x86/isr/isr.o: in function `isr10':
+/home/limon/AHK/arch/x86/isr//arch/x86/isr/isr.asm:23: multiple definition of `isr10'; build/arch/x86/isr/isr.o:/home/limon/AHK/arch/x86/isr//arch/x86/isr/isr.asm:23: first defined here
+/home/limon/opt/cross/bin/i686-elf-ld: build/arch/x86/isr/isr.o: in function `isr11':
+/home/limon/AHK/arch/x86/isr//arch/x86/isr/isr.asm:23: multiple definition of `isr11'; build/arch/x86/isr/isr.o:/home/limon/AHK/arch/x86/isr//arch/x86/isr/isr.asm:23: first defined here
+/home/limon/opt/cross/bin/i686-elf-ld: build/arch/x86/isr/isr.o: in function `isr12':
+/home/limon/AHK/arch/x86/isr//arch/x86/isr/isr.asm:23: multiple definition of `isr12'; build/arch/x86/isr/isr.o:/home/limon/AHK/arch/x86/isr//arch/x86/isr/isr.asm:23: first defined here
+/home/limon/opt/cross/bin/i686-elf-ld: build/arch/x86/isr/isr.o: in function `isr13':
+/home/limon/AHK/arch/x86/isr//arch/x86/isr/isr.asm:23: multiple definition of `isr13'; build/arch/x86/isr/isr.o:/home/limon/AHK/arch/x86/isr//arch/x86/isr/isr.asm:23: first defined here
+/home/limon/opt/cross/bin/i686-elf-ld: build/arch/x86/isr/isr.o: in function `isr14':
+/home/limon/AHK/arch/x86/isr//arch/x86/isr/isr.asm:23: multiple definition of `isr14'; build/arch/x86/isr/isr.o:/home/limon/AHK/arch/x86/isr//arch/x86/isr/isr.asm:23: first defined here
+/home/limon/opt/cross/bin/i686-elf-ld: build/arch/x86/isr/isr.o: in function `isr15':
+/home/limon/AHK/arch/x86/isr//arch/x86/isr/isr.asm:14: multiple definition of `isr15'; build/arch/x86/isr/isr.o:/home/limon/AHK/arch/x86/isr//arch/x86/isr/isr.asm:14: first defined here
+/home/limon/opt/cross/bin/i686-elf-ld: build/arch/x86/isr/isr.o: in function `isr16':
+/home/limon/AHK/arch/x86/isr//arch/x86/isr/isr.asm:14: multiple definition of `isr16'; build/arch/x86/isr/isr.o:/home/limon/AHK/arch/x86/isr//arch/x86/isr/isr.asm:14: first defined here
+/home/limon/opt/cross/bin/i686-elf-ld: build/arch/x86/isr/isr.o: in function `isr17':
+/home/limon/AHK/arch/x86/isr//arch/x86/isr/isr.asm:23: multiple definition of `isr17'; build/arch/x86/isr/isr.o:/home/limon/AHK/arch/x86/isr//arch/x86/isr/isr.asm:23: first defined here
+/home/limon/opt/cross/bin/i686-elf-ld: build/arch/x86/isr/isr.o: in function `isr18':
+/home/limon/AHK/arch/x86/isr//arch/x86/isr/isr.asm:14: multiple definition of `isr18'; build/arch/x86/isr/isr.o:/home/limon/AHK/arch/x86/isr//arch/x86/isr/isr.asm:14: first defined here
+/home/limon/opt/cross/bin/i686-elf-ld: build/arch/x86/isr/isr.o: in function `isr19':
+/home/limon/AHK/arch/x86/isr//arch/x86/isr/isr.asm:14: multiple definition of `isr19'; build/arch/x86/isr/isr.o:/home/limon/AHK/arch/x86/isr//arch/x86/isr/isr.asm:14: first defined here
+/home/limon/opt/cross/bin/i686-elf-ld: build/arch/x86/isr/isr.o: in function `isr20':
+/home/limon/AHK/arch/x86/isr//arch/x86/isr/isr.asm:14: multiple definition of `isr20'; build/arch/x86/isr/isr.o:/home/limon/AHK/arch/x86/isr//arch/x86/isr/isr.asm:14: first defined here
+/home/limon/opt/cross/bin/i686-elf-ld: build/arch/x86/isr/isr.o: in function `isr21':
+/home/limon/AHK/arch/x86/isr//arch/x86/isr/isr.asm:14: multiple definition of `isr21'; build/arch/x86/isr/isr.o:/home/limon/AHK/arch/x86/isr//arch/x86/isr/isr.asm:14: first defined here
+/home/limon/opt/cross/bin/i686-elf-ld: build/arch/x86/isr/isr.o: in function `isr22':
+/home/limon/AHK/arch/x86/isr//arch/x86/isr/isr.asm:14: multiple definition of `isr22'; build/arch/x86/isr/isr.o:/home/limon/AHK/arch/x86/isr//arch/x86/isr/isr.asm:14: first defined here
+/home/limon/opt/cross/bin/i686-elf-ld: build/arch/x86/isr/isr.o: in function `isr23':
+/home/limon/AHK/arch/x86/isr//arch/x86/isr/isr.asm:14: multiple definition of `isr23'; build/arch/x86/isr/isr.o:/home/limon/AHK/arch/x86/isr//arch/x86/isr/isr.asm:14: first defined here
+/home/limon/opt/cross/bin/i686-elf-ld: build/arch/x86/isr/isr.o: in function `isr24':
+/home/limon/AHK/arch/x86/isr//arch/x86/isr/isr.asm:14: multiple definition of `isr24'; build/arch/x86/isr/isr.o:/home/limon/AHK/arch/x86/isr//arch/x86/isr/isr.asm:14: first defined here
+/home/limon/opt/cross/bin/i686-elf-ld: build/arch/x86/isr/isr.o: in function `isr25':
+/home/limon/AHK/arch/x86/isr//arch/x86/isr/isr.asm:14: multiple definition of `isr25'; build/arch/x86/isr/isr.o:/home/limon/AHK/arch/x86/isr//arch/x86/isr/isr.asm:14: first defined here
+/home/limon/opt/cross/bin/i686-elf-ld: build/arch/x86/isr/isr.o: in function `isr26':
+/home/limon/AHK/arch/x86/isr//arch/x86/isr/isr.asm:14: multiple definition of `isr26'; build/arch/x86/isr/isr.o:/home/limon/AHK/arch/x86/isr//arch/x86/isr/isr.asm:14: first defined here
+/home/limon/opt/cross/bin/i686-elf-ld: build/arch/x86/isr/isr.o: in function `isr27':
+/home/limon/AHK/arch/x86/isr//arch/x86/isr/isr.asm:14: multiple definition of `isr27'; build/arch/x86/isr/isr.o:/home/limon/AHK/arch/x86/isr//arch/x86/isr/isr.asm:14: first defined here
+/home/limon/opt/cross/bin/i686-elf-ld: build/arch/x86/isr/isr.o: in function `isr28':
+/home/limon/AHK/arch/x86/isr//arch/x86/isr/isr.asm:14: multiple definition of `isr28'; build/arch/x86/isr/isr.o:/home/limon/AHK/arch/x86/isr//arch/x86/isr/isr.asm:14: first defined here
+/home/limon/opt/cross/bin/i686-elf-ld: build/arch/x86/isr/isr.o: in function `isr29':
+/home/limon/AHK/arch/x86/isr//arch/x86/isr/isr.asm:14: multiple definition of `isr29'; build/arch/x86/isr/isr.o:/home/limon/AHK/arch/x86/isr//arch/x86/isr/isr.asm:14: first defined here
+/home/limon/opt/cross/bin/i686-elf-ld: build/arch/x86/isr/isr.o: in function `isr30':
+/home/limon/AHK/arch/x86/isr//arch/x86/isr/isr.asm:23: multiple definition of `isr30'; build/arch/x86/isr/isr.o:/home/limon/AHK/arch/x86/isr//arch/x86/isr/isr.asm:23: first defined here
+/home/limon/opt/cross/bin/i686-elf-ld: build/arch/x86/isr/isr.o: in function `isr31':
+/home/limon/AHK/arch/x86/isr//arch/x86/isr/isr.asm:14: multiple definition of `isr31'; build/arch/x86/isr/isr.o:/home/limon/AHK/arch/x86/isr//arch/x86/isr/isr.asm:14: first defined here
+/home/limon/opt/cross/bin/i686-elf-ld: build/arch/x86/irq/irq.o: in function `irq0':
+/home/limon/AHK/arch/x86/irq//arch/x86/irq/irq.asm:14: multiple definition of `irq0'; build/arch/x86/irq/irq.o:/home/limon/AHK/arch/x86/irq//arch/x86/irq/irq.asm:14: first defined here
+/home/limon/opt/cross/bin/i686-elf-ld: build/arch/x86/irq/irq.o: in function `irq1':
+/home/limon/AHK/arch/x86/irq//arch/x86/irq/irq.asm:14: multiple definition of `irq1'; build/arch/x86/irq/irq.o:/home/limon/AHK/arch/x86/irq//arch/x86/irq/irq.asm:14: first defined here
+/home/limon/opt/cross/bin/i686-elf-ld: build/arch/x86/irq/irq.o: in function `irq2':
+/home/limon/AHK/arch/x86/irq//arch/x86/irq/irq.asm:14: multiple definition of `irq2'; build/arch/x86/irq/irq.o:/home/limon/AHK/arch/x86/irq//arch/x86/irq/irq.asm:14: first defined here
+/home/limon/opt/cross/bin/i686-elf-ld: build/arch/x86/irq/irq.o: in function `irq3':
+/home/limon/AHK/arch/x86/irq//arch/x86/irq/irq.asm:14: multiple definition of `irq3'; build/arch/x86/irq/irq.o:/home/limon/AHK/arch/x86/irq//arch/x86/irq/irq.asm:14: first defined here
+/home/limon/opt/cross/bin/i686-elf-ld: build/arch/x86/irq/irq.o: in function `irq4':
+/home/limon/AHK/arch/x86/irq//arch/x86/irq/irq.asm:14: multiple definition of `irq4'; build/arch/x86/irq/irq.o:/home/limon/AHK/arch/x86/irq//arch/x86/irq/irq.asm:14: first defined here
+/home/limon/opt/cross/bin/i686-elf-ld: build/arch/x86/irq/irq.o: in function `irq5':
+/home/limon/AHK/arch/x86/irq//arch/x86/irq/irq.asm:14: multiple definition of `irq5'; build/arch/x86/irq/irq.o:/home/limon/AHK/arch/x86/irq//arch/x86/irq/irq.asm:14: first defined here
+/home/limon/opt/cross/bin/i686-elf-ld: build/arch/x86/irq/irq.o: in function `irq6':
+/home/limon/AHK/arch/x86/irq//arch/x86/irq/irq.asm:14: multiple definition of `irq6'; build/arch/x86/irq/irq.o:/home/limon/AHK/arch/x86/irq//arch/x86/irq/irq.asm:14: first defined here
+/home/limon/opt/cross/bin/i686-elf-ld: build/arch/x86/irq/irq.o: in function `irq7':
+/home/limon/AHK/arch/x86/irq//arch/x86/irq/irq.asm:14: multiple definition of `irq7'; build/arch/x86/irq/irq.o:/home/limon/AHK/arch/x86/irq//arch/x86/irq/irq.asm:14: first defined here
+/home/limon/opt/cross/bin/i686-elf-ld: build/arch/x86/irq/irq.o: in function `irq8':
+/home/limon/AHK/arch/x86/irq//arch/x86/irq/irq.asm:14: multiple definition of `irq8'; build/arch/x86/irq/irq.o:/home/limon/AHK/arch/x86/irq//arch/x86/irq/irq.asm:14: first defined here
+/home/limon/opt/cross/bin/i686-elf-ld: build/arch/x86/irq/irq.o: in function `irq9':
+/home/limon/AHK/arch/x86/irq//arch/x86/irq/irq.asm:14: multiple definition of `irq9'; build/arch/x86/irq/irq.o:/home/limon/AHK/arch/x86/irq//arch/x86/irq/irq.asm:14: first defined here
+/home/limon/opt/cross/bin/i686-elf-ld: build/arch/x86/irq/irq.o: in function `irq10':
+/home/limon/AHK/arch/x86/irq//arch/x86/irq/irq.asm:14: multiple definition of `irq10'; build/arch/x86/irq/irq.o:/home/limon/AHK/arch/x86/irq//arch/x86/irq/irq.asm:14: first defined here
+/home/limon/opt/cross/bin/i686-elf-ld: build/arch/x86/irq/irq.o: in function `irq11':
+/home/limon/AHK/arch/x86/irq//arch/x86/irq/irq.asm:14: multiple definition of `irq11'; build/arch/x86/irq/irq.o:/home/limon/AHK/arch/x86/irq//arch/x86/irq/irq.asm:14: first defined here
+/home/limon/opt/cross/bin/i686-elf-ld: build/arch/x86/irq/irq.o: in function `irq12':
+/home/limon/AHK/arch/x86/irq//arch/x86/irq/irq.asm:14: multiple definition of `irq12'; build/arch/x86/irq/irq.o:/home/limon/AHK/arch/x86/irq//arch/x86/irq/irq.asm:14: first defined here
+/home/limon/opt/cross/bin/i686-elf-ld: build/arch/x86/irq/irq.o: in function `irq13':
+/home/limon/AHK/arch/x86/irq//arch/x86/irq/irq.asm:14: multiple definition of `irq13'; build/arch/x86/irq/irq.o:/home/limon/AHK/arch/x86/irq//arch/x86/irq/irq.asm:14: first defined here
+/home/limon/opt/cross/bin/i686-elf-ld: build/arch/x86/irq/irq.o: in function `irq14':
+/home/limon/AHK/arch/x86/irq//arch/x86/irq/irq.asm:14: multiple definition of `irq14'; build/arch/x86/irq/irq.o:/home/limon/AHK/arch/x86/irq//arch/x86/irq/irq.asm:14: first defined here
+/home/limon/opt/cross/bin/i686-elf-ld: build/arch/x86/irq/irq.o: in function `irq15':
+/home/limon/AHK/arch/x86/irq//arch/x86/irq/irq.asm:14: multiple definition of `irq15'; build/arch/x86/irq/irq.o:/home/limon/AHK/arch/x86/irq//arch/x86/irq/irq.asm:14: first defined here
+/home/limon/opt/cross/bin/i686-elf-ld: warning: kernel.elf has a LOAD segment with RWX permissions
+/home/limon/opt/cross/bin/i686-elf-ld: build/arch/x86/isr/isr.o: in function `isr_common_stub':
+/home/limon/AHK/arch/x86/isr//arch/x86/isr/isr.asm:73:(.text+0x107): undefined reference to `isr_handler'
+/home/limon/opt/cross/bin/i686-elf-ld: build/arch/x86/irq/irq.o: in function `isr_common_stub':
+/home/limon/AHK/arch/x86/irq//arch/x86/irq/irq.asm:49:(.text+0x83): undefined reference to `isr_handler'
+/home/limon/opt/cross/bin/i686-elf-ld: build/arch/x86/isr/isr.o: in function `isr_common_stub':
+/home/limon/AHK/arch/x86/isr//arch/x86/isr/isr.asm:73:(.text+0x107): undefined reference to `isr_handler'
+/home/limon/opt/cross/bin/i686-elf-ld: build/arch/x86/irq/irq.o: in function `isr_common_stub':
+/home/limon/AHK/arch/x86/irq//arch/x86/irq/irq.asm:49:(.text+0x83): undefined reference to `isr_handler'
+make: *** [Makefile:107: kernel.elf] Error 1
